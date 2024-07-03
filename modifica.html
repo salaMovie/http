@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>modifica tu cuenta</title>
+	<link rel="stylesheet" type="text/css" href="registrar.css">
+	<script type="text/javascript">
+		function sesion(){
+		alert("tus datos han sido modificados");
+	 }
+	</script>
+</head>
+<body>
+	<form name="fsesion" action="modificar.php" onsubmit="return sesion()" method="post">
+		<p> Ingresa tu correo con el que te registraste para modificar:</p>
+		<input type="text" name="correo">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+
+        <label for="email">Email</label>
+        <input type="email" name="correo" id="email" placeholder="Ingresa un correo" requerid/>
+
+        <label for="password">Ingresa contraseña</label>
+        <input type="password" name="contraseña" id="mensaje" placeholder="ingresa una contraseña"></input>
+        <input type="submit" name="modificar" value="modificar" onclick="valida_envia()">
+	</form>
+</body>
+</html>

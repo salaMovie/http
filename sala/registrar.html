@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>registrate</title>
+    <link rel="stylesheet" type="text/css" href="registrar.css">
+        <script type="text/javascript">
+            function sesion(){
+                alert("Te has registrado a sala movie");
+                if (document.fsesion.nombre.value.length==0){
+                     
+                     document.fsesion.nombre.focus();
+                     return 0;
+                }
+                if (document.fsesion.correo.value.length==0){
+                     
+                     document.fsesion.correo.focus();
+                     return 0;
+                }
+                contraseña=document.fsesion.contraseña.value
+                console.log(contraseña.length)
+                if (contraseña.length===0) {
+                    
+                    document.fsesion.contraseña.focus();
+                }
+                else if(contraseña.length===8){
+                    
+                     document.fsesion.contraseña.focus();
+                     return 0;
+                }else{
+                    
+                    document.fsesion.contraseña.focus();
+                    return 0;
+                }
+            }
+
+</script>
+</head>
+<body>
+       <header>
+         <h1>INICIA SESIÓN</h1>
+       </header>
+       <a href="index.html" align= "center"> <img src="logo.JPEG" width="100" height="100" alt="logo" > </a> 
+        <p align="center">
+    <form name="fsesion" action="altas.php" onsubmit="return sesion()" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+
+        <label for="email">Email</label>
+        <input type="email" name="correo" id="email" placeholder="Ingresa un correo" requerid/>
+
+        <label for="password">Ingresa contraseña</label>
+        <input type="password" name="contraseña" id="mensaje" placeholder="ingresa una contraseña"></input>
+
+        <input type="submit"  name="enviar" value="enviar" onclick="sesion()">
+
+        <a href="eliminar.html"><p>Deseas eliminar tu cuenta?</p></a>
+        <a href="buscar.html"><p>Requieres consultar tu contraseña?</p></a>
+        <a href="Modifica.html"><p>Modificar mi registro</p></a>
+    </form>
+    
+    <div class="pie">
+      <p>Necesitas ayuda?</p><p>llama al<u><strong> 008 25 09 123</u></strong></p>
+      <p>Creado por</p>
+      <p>Magdalena Almazán Hernández</p>
+      <p>Gabriela Bruno Simón</p>
+      <p>Ana Flores Carreón</p>
+      <p>Sarahi Valentín Gutierrez</p>
+      <p>Conalep 173 de la carrera de P.T.B en informática</p>
+    </div>
+
+</body>
+</html>
